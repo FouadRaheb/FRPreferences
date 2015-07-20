@@ -190,4 +190,4 @@ FRPDouble(@"SomeKey");
 ```
 
 ## License
-FRPreferences is under the MIT license.
+FRPreferences is under the GPL license.
