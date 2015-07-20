@@ -9,9 +9,7 @@
 #import "ViewController.h"
 #import "FRPrefs.h"
 
-#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 #define greenColor [UIColor colorWithRed:1/255.0f green:152/255.0f blue:117/255.0f alpha:1.0f]
-
 
 @implementation ViewController
 
@@ -174,7 +172,7 @@
     UILabel *underLabel;
     underLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 30, screenWidth, 60)];
     underLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14];
-    [underLabel setText:@"Thank you for your using our preferences!"];
+    [underLabel setText:@"Thank you for using our preferences!"];
     [underLabel setBackgroundColor:[UIColor clearColor]];
     underLabel.textColor = [UIColor grayColor];
     underLabel.textAlignment = NSTextAlignmentCenter;
