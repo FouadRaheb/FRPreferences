@@ -34,11 +34,12 @@ FRPSection *section1 = [FRPSection sectionWithTitle:@"Section 1 Title" footer:@"
 
 - `FRPSwitchCell`: used to create a cell with a UISwitch
 - `FRPTextFieldCell`: used to create a cell with a UITextField
-- `FRPLinkCell`: used to a row with disclosure indicator
+- `FRPLinkCell`: used to a cell with disclosure indicator
 - `FRPListCell`: used to create a list of items to select one
-- `FRPSliderCell`: used to create a row with a UISlider
-- `FRPSegmentCell`: used to create row with a UISegmentedControl
-- `FRPValueCell`: used to create a row with just a title and detail text
+- `FRPSliderCell`: used to create a cell with a UISlider
+- `FRPSegmentCell`: used to create cell with a UISegmentedControl
+- `FRPViewCell`: used to customize a view inside a cell
+- `FRPValueCell`: used to create a cell with just a title and detail text
 
 
 ***FRPSwitchCell***
