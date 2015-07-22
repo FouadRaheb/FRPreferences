@@ -106,6 +106,20 @@
     [section1 addCell:segmentCell];
     
     
+    FRPViewCell *viewCell = [FRPViewCell cellWithHeight:60 cellBlock:^(UITableViewCell *cell) {
+        cell.backgroundColor = [UIColor colorWithRed:245/255.0f green:245/255.0f blue:245/255.0f alpha:1.0f];
+        CGSize screenSize = [UIScreen mainScreen].bounds.size;
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, screenSize.width, 60)];
+        label.text = @"Customized Cell View";
+        label.textColor = greenColor;
+        label.textAlignment = NSTextAlignmentCenter;
+        [cell.contentView addSubview:label];
+    }];
+    [section1 addCell:viewCell];
+    
+    
+    [section1 addCell:[FRPValueCell cellWithTitle:@"Title" detail:@"Detail Text"]];
+
     
     /* ANOTHER SECTION */
     

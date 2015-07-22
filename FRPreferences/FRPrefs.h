@@ -18,6 +18,7 @@
 #import "FRPSliderCell.h"
 #import "FRPListCell.h"
 #import "FRPSegmentCell.h"
+#import "FRPValueCell.h"
 
 
 id FRPValue(NSString *key);

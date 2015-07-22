@@ -19,7 +19,7 @@ pod 'FRPreferences', :git => 'https://github.com/F0u4d/FRPreferences'
 
 FRPreferences has 2 types of sections:
 
-- `FRPSection`: used to create a section with multiple cells.
+- `FRPSection`: used to create a section with multiple cells
 - `FRPViewSection`: used to create a view section
 
 ***FRPSection***
@@ -32,12 +32,13 @@ FRPSection *section1 = [FRPSection sectionWithTitle:@"Section 1 Title" footer:@"
 
 **Adding cells to a section**
 
-- `FRPSwitchCell`: used to create a cell with a UISwitch.
-- `FRPTextFieldCell`: used to create a cell with a UITextField.
-- `FRPLinkCell`: used to a row with disclosure indicator.
-- `FRPListCell`: used to create a list of items to select one.
-- `FRPSliderCell`: used to create a row with a UISlider.
+- `FRPSwitchCell`: used to create a cell with a UISwitch
+- `FRPTextFieldCell`: used to create a cell with a UITextField
+- `FRPLinkCell`: used to a row with disclosure indicator
+- `FRPListCell`: used to create a list of items to select one
+- `FRPSliderCell`: used to create a row with a UISlider
 - `FRPSegmentCell`: used to create row with a UISegmentedControl
+- `FRPValueCell`: used to create a row with just a title and detail text
 
 
 ***FRPSwitchCell***
@@ -120,8 +121,29 @@ FRPSegmentCell *segmentCell = [FRPSegmentCell cellWithTitle:@"Segment Cell"
 ```
 
 
-**Creating a View section**
+***FRPViewCell***
 
+```obj-c
+FRPViewCell *viewCell = [FRPViewCell cellWithHeight:60 cellBlock:^(UITableViewCell *cell) {
+    cell.backgroundColor = [UIColor colorWithRed:245/255.0f green:245/255.0f blue:245/255.0f alpha:1.0f];
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, screenSize.width, 60)];
+    label.text = @"Customized Cell View";
+    label.textColor = greenColor;
+    label.textAlignment = NSTextAlignmentCenter;
+    [cell.contentView addSubview:label];
+}];
+[section2 addCell:viewCell];
+```
+
+***FRPValueCell***
+
+```obj-c    
+[section2 addCell:[FRPValueCell cellWithTitle:@"Title" detail:@"Detail Text"]];
+```
+
+
+**Creating a section view**
 
 ***FRPViewSection***
 

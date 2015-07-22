@@ -17,6 +17,7 @@
 - (instancetype)cellWithHeight:(int)height cellBlock:(FRPViewCellBlock)block {
     FRPViewCell *cell = [super initWithTitle:nil setting:nil];
     cell.accessoryType = UITableViewCellAccessoryNone;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.height = height;
     block(self);
     return cell;
