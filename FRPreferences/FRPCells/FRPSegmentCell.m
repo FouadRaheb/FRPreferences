@@ -40,6 +40,7 @@
     NSString *selectedItem = [self.items objectAtIndex:segment.selectedSegmentIndex];
     self.setting.value = selectedItem;
     self.valueChanged(selectedItem);
+    [[NSNotificationCenter defaultCenter] postNotificationName:self.postNotification object:selectedItem];
 }
 
 

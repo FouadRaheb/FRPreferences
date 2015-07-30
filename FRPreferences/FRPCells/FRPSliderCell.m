@@ -129,6 +129,7 @@
     self.vLabel.text = [NSString stringWithFormat:@"%.2f",[slider value]];
     self.setting.value = [NSNumber numberWithFloat:[slider value]];
     self.valueChanged(slider);
+    [[NSNotificationCenter defaultCenter] postNotificationName:self.postNotification object:slider];
 }
 
 @end

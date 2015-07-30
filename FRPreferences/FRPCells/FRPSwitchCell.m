@@ -36,6 +36,7 @@
 -(void)switchChanged:(UISwitch *)switchItem {
     self.setting.value = [NSNumber numberWithBool:[switchItem isOn]];
     self.valueChanged(switchItem);
+    [[NSNotificationCenter defaultCenter] postNotificationName:self.postNotification object:switchItem];
 }
 
 -(void)layoutSubviews {

@@ -44,6 +44,7 @@
         self.setting.value = valueOfItem;
         self.valueChanged(valueOfItem);
         cell.detailTextLabel.text = item;
+        [[NSNotificationCenter defaultCenter] postNotificationName:self.postNotification object:valueOfItem];
     }];
     selectionList.tintUIColor = self.tintUIColor;
     if (viewController.navigationController) {

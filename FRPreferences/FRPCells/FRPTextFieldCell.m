@@ -42,6 +42,7 @@
 -(void)textFieldChanged:(UITextField *)textField {
     self.setting.value = [textField text];
     self.valueChanged(textField);
+    [[NSNotificationCenter defaultCenter] postNotificationName:self.postNotification object:textField];
 }
 
 - (BOOL)textFieldShouldReturn:(id)textField {
