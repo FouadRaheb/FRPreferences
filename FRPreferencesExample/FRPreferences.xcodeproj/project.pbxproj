@@ -7,23 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		29177E391B44B3DA008F0BC0 /* FRPSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 29177E341B44B273008F0BC0 /* FRPSettings.m */; };
 		291C0B221AFED1A000D829EB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D15E931AF8B6F900F28A97 /* ViewController.m */; };
 		292815671B5806AD0028A3B7 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 292815651B5806AD0028A3B7 /* heart.png */; };
 		292815681B5806AD0028A3B7 /* heart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 292815661B5806AD0028A3B7 /* heart@2x.png */; };
-		294EBA1B1B5C30870095C95F /* FRPSegmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 294EBA1A1B5C30870095C95F /* FRPSegmentCell.m */; };
-		294EBC201B602C230095C95F /* FRPValueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 294EBC1F1B602C230095C95F /* FRPValueCell.m */; };
-		2998F0F91B4596B00047E89A /* FRPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 2998F0F81B4596B00047E89A /* FRPreferences.m */; };
-		2998F13E1B4600670047E89A /* FRPCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2998F12A1B4600670047E89A /* FRPCell.m */; };
-		2998F13F1B4600670047E89A /* FRPLinkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2998F12C1B4600670047E89A /* FRPLinkCell.m */; };
-		2998F1401B4600670047E89A /* FRPListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2998F12E1B4600670047E89A /* FRPListCell.m */; };
-		2998F1411B4600670047E89A /* FRPSelectListTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2998F1301B4600670047E89A /* FRPSelectListTable.m */; };
-		2998F1421B4600670047E89A /* FRPSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2998F1321B4600670047E89A /* FRPSliderCell.m */; };
-		2998F1431B4600670047E89A /* FRPSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2998F1341B4600670047E89A /* FRPSwitchCell.m */; };
-		2998F1441B4600670047E89A /* FRPTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2998F1361B4600670047E89A /* FRPTextFieldCell.m */; };
-		2998F1451B4600670047E89A /* FRPViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2998F1381B4600670047E89A /* FRPViewCell.m */; };
-		2998F1461B4600670047E89A /* FRPSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2998F13B1B4600670047E89A /* FRPSection.m */; };
-		2998F1471B4600670047E89A /* FRPViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2998F13D1B4600670047E89A /* FRPViewSection.m */; };
+		29409D571B6C171D00AC2304 /* FRPCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29409D391B6C171D00AC2304 /* FRPCell.m */; };
+		29409D581B6C171D00AC2304 /* FRPDeveloperCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29409D3B1B6C171D00AC2304 /* FRPDeveloperCell.m */; };
+		29409D591B6C171D00AC2304 /* FRPLinkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29409D3D1B6C171D00AC2304 /* FRPLinkCell.m */; };
+		29409D5A1B6C171D00AC2304 /* FRPListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29409D3F1B6C171D00AC2304 /* FRPListCell.m */; };
+		29409D5B1B6C171D00AC2304 /* FRPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 29409D411B6C171D00AC2304 /* FRPreferences.m */; };
+		29409D5C1B6C171D00AC2304 /* FRPSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 29409D441B6C171D00AC2304 /* FRPSection.m */; };
+		29409D5D1B6C171D00AC2304 /* FRPSegmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29409D461B6C171D00AC2304 /* FRPSegmentCell.m */; };
+		29409D5E1B6C171D00AC2304 /* FRPSelectListTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 29409D481B6C171D00AC2304 /* FRPSelectListTable.m */; };
+		29409D5F1B6C171D00AC2304 /* FRPSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 29409D4A1B6C171D00AC2304 /* FRPSettings.m */; };
+		29409D601B6C171D00AC2304 /* FRPSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29409D4C1B6C171D00AC2304 /* FRPSliderCell.m */; };
+		29409D611B6C171D00AC2304 /* FRPSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29409D4E1B6C171D00AC2304 /* FRPSwitchCell.m */; };
+		29409D621B6C171D00AC2304 /* FRPTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29409D501B6C171D00AC2304 /* FRPTextFieldCell.m */; };
+		29409D631B6C171D00AC2304 /* FRPValueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29409D521B6C171D00AC2304 /* FRPValueCell.m */; };
+		29409D641B6C171D00AC2304 /* FRPViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29409D541B6C171D00AC2304 /* FRPViewCell.m */; };
+		29409D651B6C171D00AC2304 /* FRPViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 29409D561B6C171D00AC2304 /* FRPViewSection.m */; };
+		29409D671B6C17D900AC2304 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 29409D661B6C17D900AC2304 /* logo.png */; };
 		29D15E8E1AF8B6F900F28A97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D15E8D1AF8B6F900F28A97 /* main.m */; };
 		29D15E911AF8B6F900F28A97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D15E901AF8B6F900F28A97 /* AppDelegate.m */; };
 		29D15E971AF8B6F900F28A97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29D15E951AF8B6F900F28A97 /* Main.storyboard */; };
@@ -43,37 +45,40 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		29177E331B44B273008F0BC0 /* FRPSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPSettings.h; sourceTree = "<group>"; };
-		29177E341B44B273008F0BC0 /* FRPSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPSettings.m; sourceTree = "<group>"; };
 		292815651B5806AD0028A3B7 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
 		292815661B5806AD0028A3B7 /* heart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart@2x.png"; sourceTree = "<group>"; };
-		294EBA191B5C30870095C95F /* FRPSegmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPSegmentCell.h; sourceTree = "<group>"; };
-		294EBA1A1B5C30870095C95F /* FRPSegmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPSegmentCell.m; sourceTree = "<group>"; };
-		294EBC1E1B602C230095C95F /* FRPValueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPValueCell.h; sourceTree = "<group>"; };
-		294EBC1F1B602C230095C95F /* FRPValueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPValueCell.m; sourceTree = "<group>"; };
-		2998F0F71B4596B00047E89A /* FRPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPreferences.h; sourceTree = "<group>"; };
-		2998F0F81B4596B00047E89A /* FRPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPreferences.m; sourceTree = "<group>"; };
-		2998F1271B45F5EB0047E89A /* FRPrefs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FRPrefs.h; sourceTree = "<group>"; };
-		2998F1291B4600670047E89A /* FRPCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPCell.h; sourceTree = "<group>"; };
-		2998F12A1B4600670047E89A /* FRPCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPCell.m; sourceTree = "<group>"; };
-		2998F12B1B4600670047E89A /* FRPLinkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPLinkCell.h; sourceTree = "<group>"; };
-		2998F12C1B4600670047E89A /* FRPLinkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPLinkCell.m; sourceTree = "<group>"; };
-		2998F12D1B4600670047E89A /* FRPListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPListCell.h; sourceTree = "<group>"; };
-		2998F12E1B4600670047E89A /* FRPListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPListCell.m; sourceTree = "<group>"; };
-		2998F12F1B4600670047E89A /* FRPSelectListTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPSelectListTable.h; sourceTree = "<group>"; };
-		2998F1301B4600670047E89A /* FRPSelectListTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPSelectListTable.m; sourceTree = "<group>"; };
-		2998F1311B4600670047E89A /* FRPSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPSliderCell.h; sourceTree = "<group>"; };
-		2998F1321B4600670047E89A /* FRPSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPSliderCell.m; sourceTree = "<group>"; };
-		2998F1331B4600670047E89A /* FRPSwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPSwitchCell.h; sourceTree = "<group>"; };
-		2998F1341B4600670047E89A /* FRPSwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPSwitchCell.m; sourceTree = "<group>"; };
-		2998F1351B4600670047E89A /* FRPTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPTextFieldCell.h; sourceTree = "<group>"; };
-		2998F1361B4600670047E89A /* FRPTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPTextFieldCell.m; sourceTree = "<group>"; };
-		2998F1371B4600670047E89A /* FRPViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPViewCell.h; sourceTree = "<group>"; };
-		2998F1381B4600670047E89A /* FRPViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPViewCell.m; sourceTree = "<group>"; };
-		2998F13A1B4600670047E89A /* FRPSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPSection.h; sourceTree = "<group>"; };
-		2998F13B1B4600670047E89A /* FRPSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPSection.m; sourceTree = "<group>"; };
-		2998F13C1B4600670047E89A /* FRPViewSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPViewSection.h; sourceTree = "<group>"; };
-		2998F13D1B4600670047E89A /* FRPViewSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPViewSection.m; sourceTree = "<group>"; };
+		29409D381B6C171D00AC2304 /* FRPCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPCell.h; sourceTree = "<group>"; };
+		29409D391B6C171D00AC2304 /* FRPCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPCell.m; sourceTree = "<group>"; };
+		29409D3A1B6C171D00AC2304 /* FRPDeveloperCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPDeveloperCell.h; sourceTree = "<group>"; };
+		29409D3B1B6C171D00AC2304 /* FRPDeveloperCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPDeveloperCell.m; sourceTree = "<group>"; };
+		29409D3C1B6C171D00AC2304 /* FRPLinkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPLinkCell.h; sourceTree = "<group>"; };
+		29409D3D1B6C171D00AC2304 /* FRPLinkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPLinkCell.m; sourceTree = "<group>"; };
+		29409D3E1B6C171D00AC2304 /* FRPListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPListCell.h; sourceTree = "<group>"; };
+		29409D3F1B6C171D00AC2304 /* FRPListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPListCell.m; sourceTree = "<group>"; };
+		29409D401B6C171D00AC2304 /* FRPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPreferences.h; sourceTree = "<group>"; };
+		29409D411B6C171D00AC2304 /* FRPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPreferences.m; sourceTree = "<group>"; };
+		29409D421B6C171D00AC2304 /* FRPrefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPrefs.h; sourceTree = "<group>"; };
+		29409D431B6C171D00AC2304 /* FRPSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPSection.h; sourceTree = "<group>"; };
+		29409D441B6C171D00AC2304 /* FRPSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPSection.m; sourceTree = "<group>"; };
+		29409D451B6C171D00AC2304 /* FRPSegmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPSegmentCell.h; sourceTree = "<group>"; };
+		29409D461B6C171D00AC2304 /* FRPSegmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPSegmentCell.m; sourceTree = "<group>"; };
+		29409D471B6C171D00AC2304 /* FRPSelectListTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPSelectListTable.h; sourceTree = "<group>"; };
+		29409D481B6C171D00AC2304 /* FRPSelectListTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPSelectListTable.m; sourceTree = "<group>"; };
+		29409D491B6C171D00AC2304 /* FRPSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPSettings.h; sourceTree = "<group>"; };
+		29409D4A1B6C171D00AC2304 /* FRPSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPSettings.m; sourceTree = "<group>"; };
+		29409D4B1B6C171D00AC2304 /* FRPSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPSliderCell.h; sourceTree = "<group>"; };
+		29409D4C1B6C171D00AC2304 /* FRPSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPSliderCell.m; sourceTree = "<group>"; };
+		29409D4D1B6C171D00AC2304 /* FRPSwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPSwitchCell.h; sourceTree = "<group>"; };
+		29409D4E1B6C171D00AC2304 /* FRPSwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPSwitchCell.m; sourceTree = "<group>"; };
+		29409D4F1B6C171D00AC2304 /* FRPTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPTextFieldCell.h; sourceTree = "<group>"; };
+		29409D501B6C171D00AC2304 /* FRPTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPTextFieldCell.m; sourceTree = "<group>"; };
+		29409D511B6C171D00AC2304 /* FRPValueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPValueCell.h; sourceTree = "<group>"; };
+		29409D521B6C171D00AC2304 /* FRPValueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPValueCell.m; sourceTree = "<group>"; };
+		29409D531B6C171D00AC2304 /* FRPViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPViewCell.h; sourceTree = "<group>"; };
+		29409D541B6C171D00AC2304 /* FRPViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPViewCell.m; sourceTree = "<group>"; };
+		29409D551B6C171D00AC2304 /* FRPViewSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRPViewSection.h; sourceTree = "<group>"; };
+		29409D561B6C171D00AC2304 /* FRPViewSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRPViewSection.m; sourceTree = "<group>"; };
+		29409D661B6C17D900AC2304 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		29D15E881AF8B6F900F28A97 /* FRPreferences.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FRPreferences.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29D15E8C1AF8B6F900F28A97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29D15E8D1AF8B6F900F28A97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -107,57 +112,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2934B3631B4461D5001CDDDE /* FRPreferences */ = {
+		29409D371B6C171D00AC2304 /* FRPreferences */ = {
 			isa = PBXGroup;
 			children = (
-				2998F1281B4600670047E89A /* FRPCells */,
-				2998F1391B4600670047E89A /* FRPSections */,
-				29177E331B44B273008F0BC0 /* FRPSettings.h */,
-				29177E341B44B273008F0BC0 /* FRPSettings.m */,
-				2998F0F71B4596B00047E89A /* FRPreferences.h */,
-				2998F0F81B4596B00047E89A /* FRPreferences.m */,
-				2998F1271B45F5EB0047E89A /* FRPrefs.h */,
+				29409D381B6C171D00AC2304 /* FRPCell.h */,
+				29409D391B6C171D00AC2304 /* FRPCell.m */,
+				29409D3A1B6C171D00AC2304 /* FRPDeveloperCell.h */,
+				29409D3B1B6C171D00AC2304 /* FRPDeveloperCell.m */,
+				29409D3C1B6C171D00AC2304 /* FRPLinkCell.h */,
+				29409D3D1B6C171D00AC2304 /* FRPLinkCell.m */,
+				29409D3E1B6C171D00AC2304 /* FRPListCell.h */,
+				29409D3F1B6C171D00AC2304 /* FRPListCell.m */,
+				29409D401B6C171D00AC2304 /* FRPreferences.h */,
+				29409D411B6C171D00AC2304 /* FRPreferences.m */,
+				29409D421B6C171D00AC2304 /* FRPrefs.h */,
+				29409D431B6C171D00AC2304 /* FRPSection.h */,
+				29409D441B6C171D00AC2304 /* FRPSection.m */,
+				29409D451B6C171D00AC2304 /* FRPSegmentCell.h */,
+				29409D461B6C171D00AC2304 /* FRPSegmentCell.m */,
+				29409D471B6C171D00AC2304 /* FRPSelectListTable.h */,
+				29409D481B6C171D00AC2304 /* FRPSelectListTable.m */,
+				29409D491B6C171D00AC2304 /* FRPSettings.h */,
+				29409D4A1B6C171D00AC2304 /* FRPSettings.m */,
+				29409D4B1B6C171D00AC2304 /* FRPSliderCell.h */,
+				29409D4C1B6C171D00AC2304 /* FRPSliderCell.m */,
+				29409D4D1B6C171D00AC2304 /* FRPSwitchCell.h */,
+				29409D4E1B6C171D00AC2304 /* FRPSwitchCell.m */,
+				29409D4F1B6C171D00AC2304 /* FRPTextFieldCell.h */,
+				29409D501B6C171D00AC2304 /* FRPTextFieldCell.m */,
+				29409D511B6C171D00AC2304 /* FRPValueCell.h */,
+				29409D521B6C171D00AC2304 /* FRPValueCell.m */,
+				29409D531B6C171D00AC2304 /* FRPViewCell.h */,
+				29409D541B6C171D00AC2304 /* FRPViewCell.m */,
+				29409D551B6C171D00AC2304 /* FRPViewSection.h */,
+				29409D561B6C171D00AC2304 /* FRPViewSection.m */,
 			);
 			name = FRPreferences;
 			path = ../../FRPreferences;
-			sourceTree = "<group>";
-		};
-		2998F1281B4600670047E89A /* FRPCells */ = {
-			isa = PBXGroup;
-			children = (
-				2998F1291B4600670047E89A /* FRPCell.h */,
-				2998F12A1B4600670047E89A /* FRPCell.m */,
-				2998F12B1B4600670047E89A /* FRPLinkCell.h */,
-				2998F12C1B4600670047E89A /* FRPLinkCell.m */,
-				2998F12D1B4600670047E89A /* FRPListCell.h */,
-				2998F12E1B4600670047E89A /* FRPListCell.m */,
-				2998F12F1B4600670047E89A /* FRPSelectListTable.h */,
-				2998F1301B4600670047E89A /* FRPSelectListTable.m */,
-				2998F1311B4600670047E89A /* FRPSliderCell.h */,
-				2998F1321B4600670047E89A /* FRPSliderCell.m */,
-				2998F1331B4600670047E89A /* FRPSwitchCell.h */,
-				2998F1341B4600670047E89A /* FRPSwitchCell.m */,
-				2998F1351B4600670047E89A /* FRPTextFieldCell.h */,
-				2998F1361B4600670047E89A /* FRPTextFieldCell.m */,
-				294EBA191B5C30870095C95F /* FRPSegmentCell.h */,
-				294EBA1A1B5C30870095C95F /* FRPSegmentCell.m */,
-				294EBC1E1B602C230095C95F /* FRPValueCell.h */,
-				294EBC1F1B602C230095C95F /* FRPValueCell.m */,
-				2998F1371B4600670047E89A /* FRPViewCell.h */,
-				2998F1381B4600670047E89A /* FRPViewCell.m */,
-			);
-			path = FRPCells;
-			sourceTree = "<group>";
-		};
-		2998F1391B4600670047E89A /* FRPSections */ = {
-			isa = PBXGroup;
-			children = (
-				2998F13A1B4600670047E89A /* FRPSection.h */,
-				2998F13B1B4600670047E89A /* FRPSection.m */,
-				2998F13C1B4600670047E89A /* FRPViewSection.h */,
-				2998F13D1B4600670047E89A /* FRPViewSection.m */,
-			);
-			path = FRPSections;
 			sourceTree = "<group>";
 		};
 		29D15E7F1AF8B6F900F28A97 = {
@@ -181,7 +172,7 @@
 		29D15E8A1AF8B6F900F28A97 /* FRPreferences */ = {
 			isa = PBXGroup;
 			children = (
-				2934B3631B4461D5001CDDDE /* FRPreferences */,
+				29409D371B6C171D00AC2304 /* FRPreferences */,
 				29D15E8F1AF8B6F900F28A97 /* AppDelegate.h */,
 				29D15E901AF8B6F900F28A97 /* AppDelegate.m */,
 				29D15E921AF8B6F900F28A97 /* ViewController.h */,
@@ -197,6 +188,7 @@
 		29D15E8B1AF8B6F900F28A97 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				29409D661B6C17D900AC2304 /* logo.png */,
 				292815651B5806AD0028A3B7 /* heart.png */,
 				292815661B5806AD0028A3B7 /* heart@2x.png */,
 				29D15E8C1AF8B6F900F28A97 /* Info.plist */,
@@ -305,6 +297,7 @@
 				292815671B5806AD0028A3B7 /* heart.png in Resources */,
 				29D15E971AF8B6F900F28A97 /* Main.storyboard in Resources */,
 				292815681B5806AD0028A3B7 /* heart@2x.png in Resources */,
+				29409D671B6C17D900AC2304 /* logo.png in Resources */,
 				29D15E9C1AF8B6F900F28A97 /* LaunchScreen.xib in Resources */,
 				29D15E991AF8B6F900F28A97 /* Images.xcassets in Resources */,
 			);
@@ -324,23 +317,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29177E391B44B3DA008F0BC0 /* FRPSettings.m in Sources */,
+				29409D591B6C171D00AC2304 /* FRPLinkCell.m in Sources */,
+				29409D581B6C171D00AC2304 /* FRPDeveloperCell.m in Sources */,
+				29409D641B6C171D00AC2304 /* FRPViewCell.m in Sources */,
+				29409D5D1B6C171D00AC2304 /* FRPSegmentCell.m in Sources */,
+				29409D571B6C171D00AC2304 /* FRPCell.m in Sources */,
 				291C0B221AFED1A000D829EB /* ViewController.m in Sources */,
-				2998F13E1B4600670047E89A /* FRPCell.m in Sources */,
-				2998F1471B4600670047E89A /* FRPViewSection.m in Sources */,
-				294EBC201B602C230095C95F /* FRPValueCell.m in Sources */,
-				2998F1431B4600670047E89A /* FRPSwitchCell.m in Sources */,
+				29409D5C1B6C171D00AC2304 /* FRPSection.m in Sources */,
+				29409D5B1B6C171D00AC2304 /* FRPreferences.m in Sources */,
+				29409D621B6C171D00AC2304 /* FRPTextFieldCell.m in Sources */,
 				29D15E911AF8B6F900F28A97 /* AppDelegate.m in Sources */,
-				294EBA1B1B5C30870095C95F /* FRPSegmentCell.m in Sources */,
-				2998F1401B4600670047E89A /* FRPListCell.m in Sources */,
-				2998F1421B4600670047E89A /* FRPSliderCell.m in Sources */,
+				29409D5E1B6C171D00AC2304 /* FRPSelectListTable.m in Sources */,
+				29409D5F1B6C171D00AC2304 /* FRPSettings.m in Sources */,
+				29409D611B6C171D00AC2304 /* FRPSwitchCell.m in Sources */,
+				29409D5A1B6C171D00AC2304 /* FRPListCell.m in Sources */,
+				29409D601B6C171D00AC2304 /* FRPSliderCell.m in Sources */,
+				29409D651B6C171D00AC2304 /* FRPViewSection.m in Sources */,
+				29409D631B6C171D00AC2304 /* FRPValueCell.m in Sources */,
 				29D15E8E1AF8B6F900F28A97 /* main.m in Sources */,
-				2998F0F91B4596B00047E89A /* FRPreferences.m in Sources */,
-				2998F13F1B4600670047E89A /* FRPLinkCell.m in Sources */,
-				2998F1441B4600670047E89A /* FRPTextFieldCell.m in Sources */,
-				2998F1451B4600670047E89A /* FRPViewCell.m in Sources */,
-				2998F1461B4600670047E89A /* FRPSection.m in Sources */,
-				2998F1411B4600670047E89A /* FRPSelectListTable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

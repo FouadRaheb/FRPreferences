@@ -146,7 +146,7 @@
     
     [section2 addCell:subTableLinkCell];
 
-    
+    [section2 addCell:[FRPDeveloperCell cellWithTitle:@"Fouad Raheb" detail:@"@iF0u4d" image:[UIImage imageNamed:@"logo.png"] twitter:@"iF0u4d"]];
     
     
     FRPreferences *table = [FRPreferences tableWithSections:@[headerSection,section1,section2]
@@ -164,10 +164,11 @@
 
 
 -(void)logCurrentValue:(id)sender {
-    NSLog(@"Switch1: %@",FRPBool(@"Switch1")?@"Enabled":@"Disabled");
-    NSLog(@"Field1: %@",FRPValue(@"Field1"));
-    NSLog(@"SliderKey2: %f",FRPFloat(@"SliderKey2"));
-    NSLog(@"List Cell Value: %@",FRPValue(@"ListKey"));
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSLog(@"Switch1: %@",[[userDefaults objectForKey:@"Switch1"] boolValue]?@"Enabled":@"Disabled");
+    NSLog(@"Field1: %@",[userDefaults objectForKey:@"Field1"]);
+    NSLog(@"SliderKey2: %f",[[userDefaults objectForKey:@"SliderKey2"] floatValue]);
+    NSLog(@"List Cell Value: %@",[userDefaults objectForKey:@"ListKey"]);
 }
 
 

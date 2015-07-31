@@ -20,7 +20,7 @@
 }
 
 - (instancetype)cellWithTitle:(NSString *)title detail:(NSString *)detail image:(UIImage *)image twitter:(NSString *)twitter {
-    FRPDonateCell *cell = [super initWithTitle:title setting:nil];
+    FRPDeveloperCell *cell = [super initWithTitle:title setting:nil];
     cell.twitter = twitter;
     cell.image = image;
     cell.detailTextLabel.text = detail;

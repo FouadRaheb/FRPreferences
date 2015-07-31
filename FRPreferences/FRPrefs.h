@@ -19,4 +19,4 @@
 #import "FRPListCell.h"
 #import "FRPSegmentCell.h"
 #import "FRPValueCell.h"
-#import "FRPDonateCell.h"
+#import "FRPDeveloperCell.h"
