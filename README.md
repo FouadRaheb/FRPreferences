@@ -200,15 +200,5 @@ table.navigationItem.rightBarButtonItem = heart;
 }]];
 ```
 
-
-**FRPreferences includes some C functions to access the values easily**
-
-```obj-c  
-FRPValue(@"Field1");
-FRPBool(@"Switch1");
-FRPFloat(@"SliderKey2");
-FRPDouble(@"SomeKey");
-```
-
 ## License
 FRPreferences is under the GPL license.
