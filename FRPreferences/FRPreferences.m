@@ -49,6 +49,11 @@
     self.sections = [mutSections copy];
 }
 
+-(void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    self.navigationController.navigationBar.tintColor = nil;
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self updateTintColors];
