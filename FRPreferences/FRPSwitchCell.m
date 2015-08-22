@@ -8,10 +8,6 @@
 
 #import "FRPSwitchCell.h"
 
-@interface FRPSwitchCell ()
-@property (nonatomic, strong) UISwitch *mySwitch;
-@end
-
 @implementation FRPSwitchCell
 
 + (instancetype)cellWithTitle:(NSString *)title setting:(FRPSettings *)setting postNotification:(NSString *)notification changeBlock:(FRPValueChanged)block {
@@ -25,10 +21,10 @@
     cell.valueChanged = ^(id sender) {
         if (block) block(sender);
     };
-    self.mySwitch = [[UISwitch alloc] initWithFrame:CGRectZero];
-    [self.mySwitch setOn:[self.setting.value boolValue] animated:NO];
-    [self.mySwitch addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
-    cell.accessoryView = self.mySwitch;
+    self.switchView = [[UISwitch alloc] initWithFrame:CGRectZero];
+    [self.switchView setOn:[self.setting.value boolValue] animated:NO];
+    [self.switchView addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
+    cell.accessoryView = self.switchView;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
@@ -41,7 +37,7 @@
 
 -(void)layoutSubviews {
     [super layoutSubviews];
-    self.mySwitch.onTintColor = self.tintUIColor;
-    self.mySwitch.tintColor = self.tintUIColor;
+    self.switchView.onTintColor = self.tintUIColor;
+    self.switchView.tintColor = self.tintUIColor;
 }
 @end

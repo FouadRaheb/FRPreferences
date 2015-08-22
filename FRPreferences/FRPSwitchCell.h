@@ -10,4 +10,5 @@
 
 @interface FRPSwitchCell : FRPCell
 + (instancetype)cellWithTitle:(NSString *)title setting:(FRPSettings *)setting postNotification:(NSString *)notification changeBlock:(FRPValueChanged)block;
+@property (nonatomic, strong) UISwitch *switchView;
 @end
