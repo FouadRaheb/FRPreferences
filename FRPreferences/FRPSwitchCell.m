@@ -38,6 +38,6 @@
 -(void)layoutSubviews {
     [super layoutSubviews];
     self.switchView.onTintColor = self.tintUIColor;
-    self.switchView.tintColor = self.tintUIColor;
+//    self.switchView.tintColor = self.tintUIColor;
 }
 @end

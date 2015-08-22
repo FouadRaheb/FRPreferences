@@ -47,9 +47,10 @@
     FRPSwitchCell *switchCell = [FRPSwitchCell cellWithTitle:@"Switch 1"
                                                      setting:[FRPSettings settingsWithKey:@"Switch1" defaultValue:@NO]
                                             postNotification:nil
-                                                 changeBlock:^(id sender) {
-                                                                NSLog(@"switch 1 is: %@",[(UISwitch *)sender isOn]?@"ENABLED":@"DISABLED");
+                                                 changeBlock:^(UISwitch *switchView) {
+                                                                NSLog(@"switch 1 is: %@",[(UISwitch *)switchView isOn]?@"ENABLED":@"DISABLED");
                                                             }];
+//    [switchCell.switchView setOnTintColor:[UIColor colorWithRed:0 green:0.545 blue:0.894 alpha:1]];
     [section1 addCell:switchCell];
     
     
@@ -58,8 +59,8 @@
                                                               setting:[FRPSettings settingsWithKey:@"Field1" defaultValue:@""]
                                                          placeholder:@"Enter Some text"
                                                     postNotification:nil
-                                                         changeBlock:^(id sender) {
-                                                                NSLog(@"textfield 1 text is: %@",[(UITextField *)sender text]);
+                                                         changeBlock:^(UITextField *field) {
+                                                                NSLog(@"textfield 1 text is: %@",[(UITextField *)field text]);
                                                             }];
     [section1 addCell:textFieldCell];
     
