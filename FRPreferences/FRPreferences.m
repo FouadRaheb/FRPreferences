@@ -46,7 +46,7 @@
     self.view.tintColor = tintUIColor;
     self.tableView.tintColor = tintUIColor;
     self.navigationController.navigationBar.tintColor = tintUIColor;
-    self.sections = [mutSections copy];
+    self.sections = [NSArray arrayWithArray:mutSections];
 }
 
 -(void)viewDidDisappear:(BOOL)animated {

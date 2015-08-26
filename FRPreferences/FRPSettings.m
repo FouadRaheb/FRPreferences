@@ -23,7 +23,6 @@ typedef void(^FRPSettingValueDidChangeBlock)(void);
 	if (self = [super init]) {
 		self.key = key;
 		[[NSUserDefaults standardUserDefaults] registerDefaults:@{self.key: defaultValue}];
-		[[NSUserDefaults standardUserDefaults] addObserver:self forKeyPath:self.key options:NSKeyValueObservingOptionNew context:nil];
 	}
 	
 	return self;
@@ -43,7 +42,7 @@ typedef void(^FRPSettingValueDidChangeBlock)(void);
 - (void)setValue:(id)value {
 	if (self.value != value) {
 		[[NSUserDefaults standardUserDefaults] setObject:value forKey:self.key];
-//        NSLog(@"Saving Value: %@ forKey: %@",value,self.key);
+        [[NSUserDefaults standardUserDefaults] synchronize];
         if ([self.fileSave length] > 0) {
             [self saveValue:value];
         }
@@ -55,10 +54,6 @@ typedef void(^FRPSettingValueDidChangeBlock)(void);
     if (dict == nil) dict = [NSMutableDictionary new];
     [dict setObject:value forKey:self.key];
     [dict writeToFile:self.fileSave atomically:YES];
-}
-
-- (void)dealloc {
-    [[NSUserDefaults standardUserDefaults] removeObserver:self forKeyPath:self.key];
 }
 
 @end
