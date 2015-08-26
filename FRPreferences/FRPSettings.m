@@ -16,37 +16,36 @@ typedef void(^FRPSettingValueDidChangeBlock)(void);
 @implementation FRPSettings
 
 + (instancetype)settingsWithKey:(NSString *)key defaultValue:(id)defaultValue {
-	return [[self alloc] initWithKey:key defaultValue:defaultValue];
+    return [[self alloc] initWithKey:key defaultValue:defaultValue];
 }
 
 - (instancetype)initWithKey:(NSString *)key defaultValue:(id)defaultValue {
-	if (self = [super init]) {
-		self.key = key;
-		[[NSUserDefaults standardUserDefaults] registerDefaults:@{self.key: defaultValue}];
-	}
-	
-	return self;
+    if (self = [super init]) {
+        self.key = key;
+        [[NSUserDefaults standardUserDefaults] registerDefaults:@{self.key: defaultValue}];
+    }
+    
+    return self;
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-	self.value = [change objectForKey:@"new"];
     if (self.valueDidChangeBlock) {
-       self.valueDidChangeBlock();
+        self.valueDidChangeBlock();
     }
 }
 
 - (id)value {
-	return [[NSUserDefaults standardUserDefaults] objectForKey:self.key];
+    return [[NSUserDefaults standardUserDefaults] objectForKey:self.key];
 }
 
 - (void)setValue:(id)value {
-	if (self.value != value) {
-		[[NSUserDefaults standardUserDefaults] setObject:value forKey:self.key];
+    if (self.value != value) {
+        [[NSUserDefaults standardUserDefaults] setObject:value forKey:self.key];
         [[NSUserDefaults standardUserDefaults] synchronize];
         if ([self.fileSave length] > 0) {
             [self saveValue:value];
         }
-	}
+    }
 }
 
 -(void)saveValue:(id)value {
@@ -57,5 +56,3 @@ typedef void(^FRPSettingValueDidChangeBlock)(void);
 }
 
 @end
-
-
