@@ -11,7 +11,6 @@
 #import "FRPSection.h"
 
 @interface FRPreferences ()
-@property (nonatomic, strong) NSArray *sections;
 @property (nonatomic, strong) UIColor *tintUIColor;
 @end
 
