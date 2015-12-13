@@ -147,7 +147,7 @@
     
     [section2 addCell:subTableLinkCell];
 
-    [section2 addCell:[FRPDeveloperCell cellWithTitle:@"Fouad Raheb" detail:@"@iF0u4d" image:[UIImage imageNamed:@"logo.png"] twitter:@"iF0u4d"]];
+    [section2 addCell:[FRPDeveloperCell cellWithTitle:@"Fouad Raheb" detail:@"@iF0u4d" image:[UIImage imageNamed:@"logo.png"] twitter:@"iF0u4d"]]; // Or any url https://twitter.com/iF0u4d
     
     
     FRPreferences *table = [FRPreferences tableWithSections:@[headerSection,section1,section2]

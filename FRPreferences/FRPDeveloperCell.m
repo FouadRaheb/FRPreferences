@@ -43,9 +43,25 @@
 
 -(void)didSelectFromTable:(FRPreferences *)viewController {
     NSIndexPath *indexPath = [viewController.tableView indexPathForCell:self];
-    [self twitterForUsername:self.twitter];
+    if ([self string:self.twitter containsString:@"https://"] || [self string:self.twitter containsString:@"http://"]) {
+        NSLog(@"Is URL");
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.twitter]];
+    }
+    else {
+        [self twitterForUsername:self.twitter];
+    }
     [viewController.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
+-(BOOL)string:(NSString *)string containsString:(NSString *)substring {
+    if ([string respondsToSelector:@selector(containsString:)]) {
+        return [string containsString:substring];
+    }
+    else {
+        return [string rangeOfString:substring options:NSCaseInsensitiveSearch].location != NSNotFound;
+    }
+}
+
 
 -(void)twitterForUsername:(NSString *)username {
     if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tweetbot:"]])
