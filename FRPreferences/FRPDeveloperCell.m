@@ -9,19 +9,19 @@
 #import "FRPDeveloperCell.h"
 
 @interface FRPDeveloperCell ()
-@property (nonatomic, assign) NSString *twitter;
+@property (nonatomic, assign) NSString *url;
 @property (nonatomic, assign) UIImage *image;
 @end
 
 @implementation FRPDeveloperCell
 
-+ (instancetype)cellWithTitle:(NSString *)title detail:(NSString *)detail image:(UIImage *)image twitter:(NSString *)twitter {
-    return [[self alloc] cellWithTitle:title detail:detail image:image twitter:twitter];
++ (instancetype)cellWithTitle:(NSString *)title detail:(NSString *)detail image:(UIImage *)image url:(NSString *)url {
+    return [[self alloc] cellWithTitle:title detail:detail image:image url:url];
 }
 
-- (instancetype)cellWithTitle:(NSString *)title detail:(NSString *)detail image:(UIImage *)image twitter:(NSString *)twitter {
+- (instancetype)cellWithTitle:(NSString *)title detail:(NSString *)detail image:(UIImage *)image url:(NSString *)url {
     FRPDeveloperCell *cell = [super initWithTitle:title setting:nil];
-    cell.twitter = twitter;
+    cell.url = url;
     cell.image = image;
     cell.detailTextLabel.text = detail;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -42,40 +42,8 @@
 }
 
 -(void)didSelectFromTable:(FRPreferences *)viewController {
-    NSIndexPath *indexPath = [viewController.tableView indexPathForCell:self];
-    if ([self string:self.twitter containsString:@"https://"] || [self string:self.twitter containsString:@"http://"]) {
-        NSLog(@"Is URL");
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.twitter]];
-    }
-    else {
-        [self twitterForUsername:self.twitter];
-    }
-    [viewController.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [viewController.tableView deselectRowAtIndexPath:[viewController.tableView indexPathForCell:self] animated:YES];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.url]];
 }
 
--(BOOL)string:(NSString *)string containsString:(NSString *)substring {
-    if ([string respondsToSelector:@selector(containsString:)]) {
-        return [string containsString:substring];
-    }
-    else {
-        return [string rangeOfString:substring options:NSCaseInsensitiveSearch].location != NSNotFound;
-    }
-}
-
-
--(void)twitterForUsername:(NSString *)username {
-    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tweetbot:"]])
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[@"tweetbot:///user_profile/" stringByAppendingString:username]]];
-    
-    else if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"twitterrific:"]])
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[@"twitterrific:///profile?screen_name=" stringByAppendingString:username]]];
-    
-    else if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tweetings:"]])
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[@"tweetings:///user?screen_name=" stringByAppendingString:username]]];
-    
-    else if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"twitter:"]])
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[@"twitter://user?screen_name=" stringByAppendingString:username]]];
-    else
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[@"https://mobile.twitter.com/" stringByAppendingString:username]]];
-}
 @end
