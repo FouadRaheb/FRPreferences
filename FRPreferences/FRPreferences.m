@@ -44,7 +44,6 @@
     }
     self.view.tintColor = tintUIColor;
     self.tableView.tintColor = tintUIColor;
-    self.navigationController.navigationBar.tintColor = tintUIColor;
     self.sections = [NSArray arrayWithArray:mutSections];
 }
 

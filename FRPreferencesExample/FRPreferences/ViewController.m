@@ -164,14 +164,14 @@
     FRPreferences *table = [FRPreferences tableWithSections:@[headerSection,section1,section2]
                                                       title:@"FRPreferences"
                                                   tintColor:greenColor];
-    
 //    table.plistPath = @"some/path/to/file.plist"; // You can set a plistPath if you wish to save values into plist file
     
     UIBarButtonItem *heart = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"heart.png"] style:UIBarButtonItemStylePlain target:self action:@selector(shareTapped:)];
     table.navigationItem.rightBarButtonItem = heart;
     
     [self.navigationController pushViewController:table animated:YES];
-
+    
+    table.navigationController.navigationBar.tintColor = greenColor;
 }
 
 
