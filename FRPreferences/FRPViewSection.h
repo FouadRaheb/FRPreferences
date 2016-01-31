@@ -11,5 +11,5 @@
 
 @interface FRPViewSection : FRPSection
 @property (nonatomic, copy) FRPViewCellBlock cellBlock;
-+ (instancetype)sectionWithHeight:(int)height cellBlock:(FRPViewCellBlock)block;
++ (instancetype)sectionWithHeight:(int)height initBlock:(FRPViewCellBlock)initBlock layoutBlock:(FRPViewCellBlock)layoutBlock;
 @end

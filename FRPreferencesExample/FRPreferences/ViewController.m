@@ -33,10 +33,14 @@
 
 
 -(void)loadNewSettings:(id)sender {
-    FRPViewSection *headerSection = [FRPViewSection sectionWithHeight:70 cellBlock:^(UITableViewCell *cell) {
-       cell = [self cellAdditions:cell];
-        /* design your cell as you wish */
-    }];
+    FRPViewSection *headerSection = [FRPViewSection sectionWithHeight:70
+                                                            initBlock:^(UITableViewCell *cell) {
+                                                                cell = [self cellAdditions:cell];
+                                                                /* design your cell as you wish */
+                                                            }
+                                                          layoutBlock:^(UITableViewCell *cell) {
+                                                              
+                                                          }];
     
     
     
@@ -107,15 +111,22 @@
     [section1 addCell:segmentCell];
     
     
-    FRPViewCell *viewCell = [FRPViewCell cellWithHeight:60 cellBlock:^(UITableViewCell *cell) {
-        cell.backgroundColor = [UIColor colorWithRed:245/255.0f green:245/255.0f blue:245/255.0f alpha:1.0f];
-        CGSize screenSize = [UIScreen mainScreen].bounds.size;
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, screenSize.width, 60)];
-        label.text = @"Customized Cell View";
-        label.textColor = greenColor;
-        label.textAlignment = NSTextAlignmentCenter;
-        [cell.contentView addSubview:label];
-    }];
+    FRPViewCell *viewCell = [FRPViewCell cellWithHeight:60
+                                              initBlock:^(UITableViewCell *cell) {
+                                                  cell.backgroundColor = [UIColor colorWithRed:245/255.0f green:245/255.0f blue:245/255.0f alpha:1.0f];
+                                                  UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
+                                                  label.text = @"Customized Cell View";
+                                                  label.textColor = greenColor;
+                                                  label.textAlignment = NSTextAlignmentCenter;
+                                                  label.tag = 123;
+                                                  [cell.contentView addSubview:label];
+                                              }
+                                            layoutBlock:^(UITableViewCell *cell) {
+                                                UILabel *label = (UILabel *)[cell.contentView viewWithTag:123];
+                                                label.frame = CGRectMake(0, 0, cell.contentView.frame.size.width, 60);
+                                            }];
+
+
     [section1 addCell:viewCell];
     
     

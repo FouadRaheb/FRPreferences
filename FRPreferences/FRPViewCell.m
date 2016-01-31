@@ -10,21 +10,23 @@
 
 @implementation FRPViewCell
 
-+ (instancetype)cellWithHeight:(int)height cellBlock:(FRPViewCellBlock)block {
-    return [[self alloc] cellWithHeight:height cellBlock:block];
++ (instancetype)cellWithHeight:(int)height initBlock:(FRPViewCellBlock)initBlock layoutBlock:(FRPViewCellBlock)layoutBlock {
+    return [[self alloc] cellWithHeight:height initBlock:initBlock layoutBlock:layoutBlock];
 }
 
-- (instancetype)cellWithHeight:(int)height cellBlock:(FRPViewCellBlock)block {
+- (instancetype)cellWithHeight:(int)height initBlock:(FRPViewCellBlock)initBlock layoutBlock:(FRPViewCellBlock)layoutBlock {
     FRPViewCell *cell = [super initWithTitle:nil setting:nil];
+    if (layoutBlock) self.layoutBlock = layoutBlock;
     cell.accessoryType = UITableViewCellAccessoryNone;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.height = height;
-    block(self);
+    initBlock(cell);
     return cell;
 }
 
 -(void)layoutSubviews {
     [super layoutSubviews];
+    if (self.layoutBlock) self.layoutBlock(self);
 }
 
 -(void)addSubview:(UIView *)view {

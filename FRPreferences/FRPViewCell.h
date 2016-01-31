@@ -11,6 +11,10 @@
 typedef void (^FRPViewCellBlock)(UITableViewCell *cell);
 
 @interface FRPViewCell : FRPCell
-+ (instancetype)cellWithHeight:(int)height cellBlock:(FRPViewCellBlock)block;
+
++ (instancetype)cellWithHeight:(int)height initBlock:(FRPViewCellBlock)initBlock layoutBlock:(FRPViewCellBlock)layoutBlock;
+
+@property (nonatomic, strong) FRPViewCellBlock layoutBlock;
 @property (nonatomic, assign) BOOL hideSeperators;
+
 @end
