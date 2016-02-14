@@ -32,8 +32,7 @@
 
 -(void)updateTintColors {
     UIColor *tintUIColor = self.tintUIColor;
-    NSMutableArray *mutSections = [self.sections mutableCopy];
-    for (FRPSection *section in mutSections) {
+    for (FRPSection *section in self.sections) {
         for (FRPCell *cell in section.cells) {
             cell.tintUIColor = tintUIColor;
             if ([self.plistPath length] > 0 && cell.setting) {
@@ -44,12 +43,10 @@
     }
     self.view.tintColor = tintUIColor;
     self.tableView.tintColor = tintUIColor;
-    self.sections = [NSArray arrayWithArray:mutSections];
 }
 
 -(void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
-    self.navigationController.navigationBar.tintColor = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
