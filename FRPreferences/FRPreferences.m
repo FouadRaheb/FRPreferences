@@ -11,26 +11,28 @@
 #import "FRPSection.h"
 
 @interface FRPreferences ()
+
 @property (nonatomic, strong) UIColor *tintUIColor;
+
 @end
 
 @implementation FRPreferences
 
-+(instancetype)tableWithSections:(NSArray *)sections title:(NSString *)title tintColor:(UIColor *)color {
++ (instancetype)tableWithSections:(NSArray *)sections title:(NSString *)title tintColor:(UIColor *)color {
     FRPreferences *table = [[self alloc] initTableWithSections:sections];
     table.title = title;
     table.tintUIColor = color;
     return table;
 }
 
--(instancetype)initTableWithSections:(NSArray *)sections {
+- (instancetype)initTableWithSections:(NSArray *)sections {
     if (self = [super initWithStyle:UITableViewStyleGrouped]) {
         self.sections = sections;
     }
     return self;
 }
 
--(void)updateTintColors {
+- (void)updateTintColors {
     UIColor *tintUIColor = self.tintUIColor;
     for (FRPSection *section in self.sections) {
         for (FRPCell *cell in section.cells) {
@@ -45,7 +47,7 @@
     self.tableView.tintColor = tintUIColor;
 }
 
--(void)viewDidDisappear:(BOOL)animated {
+- (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
 }
 

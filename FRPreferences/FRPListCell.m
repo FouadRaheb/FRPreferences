@@ -34,7 +34,7 @@
     return cell;
 }
 
--(void)didSelectFromTable:(FRPreferences *)viewController {
+- (void)didSelectFromTable:(FRPreferences *)viewController {
     NSIndexPath *indexPath = [viewController.tableView indexPathForCell:self];
     [viewController.tableView deselectRowAtIndexPath:indexPath animated:YES];
     UITableViewCell *cell = [viewController.tableView cellForRowAtIndexPath:indexPath];
@@ -54,7 +54,7 @@
     }
 }
 
--(void)layoutSubviews {
+- (void)layoutSubviews {
     [super layoutSubviews];
 }
 @end

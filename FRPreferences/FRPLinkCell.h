@@ -9,6 +9,8 @@
 #import "FRPCell.h"
 
 @interface FRPLinkCell : FRPCell
+
 + (instancetype)cellWithTitle:(NSString *)title selectedBlock:(FRPValueChanged)block;
+
 @end
 

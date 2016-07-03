@@ -35,13 +35,13 @@
     return cell;
 }
 
--(void)layoutSubviews {
+- (void)layoutSubviews {
     [super layoutSubviews];
     self.imageView.layer.cornerRadius = self.imageView.frame.size.width / 2;
     self.imageView.clipsToBounds = YES;
 }
 
--(void)didSelectFromTable:(FRPreferences *)viewController {
+- (void)didSelectFromTable:(FRPreferences *)viewController {
     [viewController.tableView deselectRowAtIndexPath:[viewController.tableView indexPathForCell:self] animated:YES];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.url]];
 }

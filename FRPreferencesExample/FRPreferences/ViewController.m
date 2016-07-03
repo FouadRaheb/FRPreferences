@@ -32,7 +32,7 @@
 }
 
 
--(void)loadNewSettings:(id)sender {
+- (void)loadNewSettings:(id)sender {
     FRPViewSection *headerSection = [FRPViewSection sectionWithHeight:70
                                                             initBlock:^(UITableViewCell *cell) {
                                                                 cell = [self cellAdditions:cell];
@@ -102,8 +102,9 @@
     
     
     FRPSegmentCell *segmentCell = [FRPSegmentCell cellWithTitle:@"Segment Cell"
-                                                        setting:[FRPSettings settingsWithKey:@"SegmentValue" defaultValue:@"50"]
-                                                          items:@[@"20",@"50",@"100",@"All"]
+                                                        setting:[FRPSettings settingsWithKey:@"SegmentValue" defaultValue:@"6"]
+                                                         values:@[@"2",@"5",@"6",@"All"]
+                                                displayedValues:@[@"Two",@"Five",@"Six",@"All"]
                                                postNotification:nil
                                                     changeBlock:^(NSString *item) {
                                                         NSLog(@"Selected Item: %@",item);

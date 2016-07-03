@@ -9,5 +9,7 @@
 #import "FRPCell.h"
 
 @interface FRPTextFieldCell : FRPCell <UITextFieldDelegate>
+
 + (instancetype)cellWithTitle:(NSString *)title setting:(FRPSettings *)setting placeholder:(NSString *)placeholder postNotification:(NSString *)notification changeBlock:(FRPValueChanged)block;
+
 @end

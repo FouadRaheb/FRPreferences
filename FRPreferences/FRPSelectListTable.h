@@ -19,5 +19,6 @@
 @property (nonatomic, copy) FRPListItemChange itemChanged;
 @property (nonatomic, copy) UIColor *tintUIColor;
 
--(instancetype)initWithStyle:(UITableViewStyle)style title:(NSString *)title items:(NSArray *)items values:(NSArray *)values currentValue:(NSString *)value popViewOnSelect:(BOOL)back changeBlock:(FRPListItemChange)block;
+- (instancetype)initWithStyle:(UITableViewStyle)style title:(NSString *)title items:(NSArray *)items values:(NSArray *)values currentValue:(NSString *)value popViewOnSelect:(BOOL)back changeBlock:(FRPListItemChange)block;
+
 @end

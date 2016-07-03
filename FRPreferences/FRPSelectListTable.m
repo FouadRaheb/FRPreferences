@@ -9,7 +9,8 @@
 #import "FRPSelectListTable.h"
 
 @implementation FRPSelectListTable
--(instancetype)initWithStyle:(UITableViewStyle)style title:(NSString *)title items:(NSArray *)items values:(NSArray *)values currentValue:(NSString *)value popViewOnSelect:(BOOL)back changeBlock:(FRPListItemChange)block {
+
+- (instancetype)initWithStyle:(UITableViewStyle)style title:(NSString *)title items:(NSArray *)items values:(NSArray *)values currentValue:(NSString *)value popViewOnSelect:(BOOL)back changeBlock:(FRPListItemChange)block {
     listItems = items;
     listValues = values;
     currentValue = value;
@@ -21,7 +22,7 @@
     return [self initWithStyle:style];
 }
 
--(void)viewDidLoad {
+- (void)viewDidLoad {
     [super viewDidLoad];
     self.title = pageTitle;
     self.view.tintColor = self.tintUIColor;
@@ -70,4 +71,5 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
 @end

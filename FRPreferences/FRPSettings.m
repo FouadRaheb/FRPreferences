@@ -48,7 +48,7 @@ typedef void(^FRPSettingValueDidChangeBlock)(void);
     }
 }
 
--(void)saveValue:(id)value {
+- (void)saveValue:(id)value {
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithContentsOfFile:self.fileSave];
     if (dict == nil) dict = [NSMutableDictionary new];
     [dict setObject:value forKey:self.key];

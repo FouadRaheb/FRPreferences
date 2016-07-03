@@ -112,12 +112,13 @@ FRPSliderCell *sliderCell = [FRPSliderCell cellWithTitle:@"Slider Cell"
 
 ```obj-c    
 FRPSegmentCell *segmentCell = [FRPSegmentCell cellWithTitle:@"Segment Cell"
-                                                    setting:[FRPSettings settingsWithKey:@"SegmentValue" defaultValue:@"50"]
-                                                      items:@[@"20",@"50",@"100",@"All"]
+                                                    setting:[FRPSettings settingsWithKey:@"SegmentValue" defaultValue:@"6"]
+                                                     values:@[@"2",@"5",@"6",@"All"]
+                                            displayedValues:@[@"Two",@"Five",@"Six",@"All"]
                                            postNotification:nil
                                                 changeBlock:^(NSString *item) {
-                                                            NSLog(@"Selected Item: %@",item);
-                                                    }];
+                                                    NSLog(@"Selected Item: %@",item);
+                                                }];
 [section2 addCell:segmentCell];
 ```
 

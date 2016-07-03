@@ -9,5 +9,7 @@
 #import "FRPCell.h"
 
 @interface FRPValueCell : FRPCell
+
 + (instancetype)cellWithTitle:(NSString *)title detail:(NSString *)detail;
+
 @end

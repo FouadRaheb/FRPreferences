@@ -9,5 +9,7 @@
 #import "FRPCell.h"
 
 @interface FRPDeveloperCell : FRPCell
+
 + (instancetype)cellWithTitle:(NSString *)title detail:(NSString *)detail image:(UIImage *)image url:(NSString *)url;
+
 @end

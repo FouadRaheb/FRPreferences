@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface FRPreferences : UITableViewController
+
 @property (nonatomic, strong) NSArray *sections;
 @property (nonatomic, strong) NSString *plistPath;
-+(instancetype)tableWithSections:(NSArray *)sections title:(NSString *)title tintColor:(UIColor *)color;
+
++ (instancetype)tableWithSections:(NSArray *)sections title:(NSString *)title tintColor:(UIColor *)color;
+
 @end

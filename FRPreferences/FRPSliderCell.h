@@ -20,4 +20,5 @@
 @property (nonatomic) float max;
 
 + (instancetype)cellWithTitle:(NSString *)title setting:(FRPSettings *)setting min:(float)min max:(float)max postNotification:(NSString *)notification changeBlock:(FRPValueChanged)block;
+
 @end

@@ -29,15 +29,16 @@
     return cell;
 }
 
--(void)switchChanged:(UISwitch *)switchItem {
+- (void)switchChanged:(UISwitch *)switchItem {
     self.setting.value = [NSNumber numberWithBool:[switchItem isOn]];
     self.valueChanged(switchItem);
     [[NSNotificationCenter defaultCenter] postNotificationName:self.postNotification object:switchItem];
 }
 
--(void)layoutSubviews {
+- (void)layoutSubviews {
     [super layoutSubviews];
     self.switchView.onTintColor = self.tintUIColor;
 //    self.switchView.tintColor = self.tintUIColor;
 }
+
 @end
