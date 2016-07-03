@@ -35,11 +35,33 @@
 - (void)loadNewSettings:(id)sender {
     FRPViewSection *headerSection = [FRPViewSection sectionWithHeight:70
                                                             initBlock:^(UITableViewCell *cell) {
-                                                                cell = [self cellAdditions:cell];
                                                                 /* design your cell as you wish */
+                                                                /* block of code executed during cell initialization */
+                                                                cell.backgroundColor = [UIColor clearColor];
+                                                                
+                                                                UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
+                                                                label.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:48];
+                                                                [label setText:@"FRPreferences"];
+                                                                [label setTextColor:[UIColor blackColor]];
+                                                                [label setShadowColor:[UIColor colorWithRed:1/255.0f green:152/255.0f blue:117/255.0f alpha:1.0f]];
+                                                                [label setShadowOffset:CGSizeMake(1,1)];
+                                                                [label setTextAlignment:NSTextAlignmentCenter];
+                                                                [label setTag:111];
+                                                                
+                                                                UILabel *underLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+                                                                [underLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:14]];
+                                                                [underLabel setText:@"Thank you for using our preferences!"];
+                                                                [underLabel setTextColor:[UIColor grayColor]];
+                                                                [underLabel setTextAlignment:NSTextAlignmentCenter];
+                                                                [underLabel setTag:222];
+                                                                
+                                                                [cell.contentView addSubview:label];
+                                                                [cell.contentView addSubview:underLabel];
                                                             }
                                                           layoutBlock:^(UITableViewCell *cell) {
-                                                              
+                                                              /* block of code executed during cell layoutSubviews */
+                                                              [[cell.contentView viewWithTag:111] setFrame:CGRectMake(0, -5, cell.frame.size.width, 60)];
+                                                              [[cell.contentView viewWithTag:222] setFrame:CGRectMake(0, 30, cell.frame.size.width, 60)];
                                                           }];
     
     
@@ -176,7 +198,7 @@
 }
 
 
--(void)logCurrentValue:(id)sender {
+- (void)logCurrentValue:(id)sender {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSLog(@"Switch1: %@",[[userDefaults objectForKey:@"Switch1"] boolValue]?@"Enabled":@"Disabled");
     NSLog(@"Field1: %@",[userDefaults objectForKey:@"Field1"]);
@@ -184,33 +206,7 @@
     NSLog(@"List Cell Value: %@",[userDefaults objectForKey:@"ListKey"]);
 }
 
-
--(UITableViewCell *)cellAdditions:(UITableViewCell *)cell {
-    CGFloat screenWidth  = [[UIScreen mainScreen] bounds].size.width;
-    cell.backgroundColor = [UIColor clearColor];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, -5, screenWidth, 60)];
-    label.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:48];
-    [label setText:@"FRPreferences"];
-    [label setBackgroundColor:[UIColor clearColor]];
-    label.textColor = [UIColor blackColor];
-    [label setShadowColor:[UIColor colorWithRed:1/255.0f green:152/255.0f blue:117/255.0f alpha:1.0f]];
-    [label setShadowOffset:CGSizeMake(1,1)];
-    label.textAlignment = NSTextAlignmentCenter;
-    
-    UILabel *underLabel;
-    underLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 30, screenWidth, 60)];
-    underLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14];
-    [underLabel setText:@"Thank you for using our preferences!"];
-    [underLabel setBackgroundColor:[UIColor clearColor]];
-    underLabel.textColor = [UIColor grayColor];
-    underLabel.textAlignment = NSTextAlignmentCenter;
-    
-    [cell.contentView addSubview:label];
-    [cell.contentView addSubview:underLabel];
-    return cell;
-}
-
--(void)shareTapped:(id)sender {
+- (void)shareTapped:(id)sender {
     NSLog(@"Share Tapped!");
 }
 

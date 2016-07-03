@@ -154,9 +154,13 @@ FRPViewCell *viewCell = [FRPViewCell cellWithHeight:60
 ***FRPViewSection***
 
 ```obj-c  
-FRPViewSection *headerSection = [FRPViewSection sectionWithHeight:70 cellBlock:^(UITableViewCell *cell) {
-    // design your cell as you wish
-}];
+FRPViewSection *headerSection = [FRPViewSection sectionWithHeight:70
+                                                        initBlock:^(UITableViewCell *cell) {
+                                                            /* block called once during cell initialization */
+                                                        }
+                                                      layoutBlock:^(UITableViewCell *cell) {
+                                                          	/* block called during cell layoutSubviews */
+                                                      }];
 ```
 
 

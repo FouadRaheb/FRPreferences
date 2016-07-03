@@ -29,8 +29,4 @@
     return section;
 }
 
-- (void)layoutSubviews {
-    
-}
-
 @end
