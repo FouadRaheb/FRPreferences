@@ -10,9 +10,9 @@
 
 @interface FRPSettings : NSObject
 
-@property (nonatomic, assign) NSString *key;
-@property (nonatomic, assign) id value;
-@property (nonatomic, assign) NSString *fileSave;
+@property (nonatomic, strong) NSString *key;
+@property (nonatomic, strong) id value;
+@property (nonatomic, strong) NSString *fileSave;
 
 + (instancetype)settingsWithKey:(NSString *)key defaultValue:(id)defaultValue;
 @end
