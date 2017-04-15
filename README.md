@@ -2,12 +2,12 @@
 
 FRPreferences allows you to easily setup an In-App preferences table.
 
-![](https://raw.githubusercontent.com/F0u4d/FRPreferences/master/Screenshot/screenshots.png)
+![](https://raw.githubusercontent.com/FouadRaheb/FRPreferences/master/Screenshot/screenshots.png)
 
 ## Installation
 
 ```ruby
-pod 'FRPreferences', :git => 'https://github.com/F0u4d/FRPreferences'
+pod 'FRPreferences', :git => 'https://github.com/FouadRaheb/FRPreferences'
 ```
 
 ## Usage
