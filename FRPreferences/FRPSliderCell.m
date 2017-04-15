@@ -10,17 +10,16 @@
 
 @implementation FRPSliderCell
 
-+ (instancetype)cellWithTitle:(NSString *)title setting:(FRPSettings *)setting min:(float)min max:(float)max postNotification:(NSString *)notification changeBlock:(FRPValueChanged)block {
++ (instancetype)cellWithTitle:(NSString *)title setting:(FRPSettings *)setting min:(float)min max:(float)max postNotification:(NSString *)notification changeBlock:(FRPSliderCellChanged)block {
     return [[self alloc] cellWithTitle:title setting:setting min:min max:max postNotification:notification changeBlock:block];
 }
 
 
-- (instancetype)cellWithTitle:(NSString *)title setting:(FRPSettings *)setting min:(float)min max:(float)max postNotification:(NSString *)notification changeBlock:(FRPValueChanged)block {
+- (instancetype)cellWithTitle:(NSString *)title setting:(FRPSettings *)setting min:(float)min max:(float)max postNotification:(NSString *)notification changeBlock:(FRPSliderCellChanged)block {
     FRPSliderCell *cell = [super initWithTitle:nil setting:setting];
     cell.postNotification = notification;
-    cell.valueChanged = ^(id sender) {
-        if (block) block(sender);
-    };
+    cell.valueChanged = block;
+    
     UISlider *sliderCell = [[UISlider alloc] initWithFrame:CGRectZero];
     sliderCell.minimumValue = min;
     sliderCell.maximumValue = max;
@@ -82,16 +81,7 @@
     return cell;
 }
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-    
-    }
-    return self;
-}
-
-
--(void)layoutSubviews {
+- (void)layoutSubviews {
     [super layoutSubviews];
     
     float sliderW = self.contentView.frame.size.width/1.8;
@@ -128,7 +118,9 @@
 - (void)sliderChanged:(UISlider *)slider {
     self.vLabel.text = [NSString stringWithFormat:@"%.2f",[slider value]];
     self.setting.value = [NSNumber numberWithFloat:[slider value]];
-    self.valueChanged(slider);
+    if (self.valueChanged) {
+        self.valueChanged(slider);
+    }
     [[NSNotificationCenter defaultCenter] postNotificationName:self.postNotification object:slider];
 }
 

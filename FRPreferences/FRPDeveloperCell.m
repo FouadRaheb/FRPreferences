@@ -9,8 +9,8 @@
 #import "FRPDeveloperCell.h"
 
 @interface FRPDeveloperCell ()
-@property (nonatomic, assign) NSString *url;
-@property (nonatomic, assign) UIImage *image;
+@property (nonatomic, strong) NSString *url;
+@property (nonatomic, strong) UIImage *image;
 @end
 
 @implementation FRPDeveloperCell

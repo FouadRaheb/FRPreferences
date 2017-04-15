@@ -85,8 +85,8 @@
                                                               setting:[FRPSettings settingsWithKey:@"Field1" defaultValue:@""]
                                                          placeholder:@"Enter Some text"
                                                     postNotification:nil
-                                                         changeBlock:^(UITextField *field) {
-                                                                NSLog(@"textfield 1 text is: %@",[(UITextField *)field text]);
+                                                         changeBlock:^(UITextField *sender) {
+                                                                NSLog(@"textfield 1 text is: %@",[(UITextField *)sender text]);
                                                             }];
     [section1 addCell:textFieldCell];
     
@@ -200,10 +200,14 @@
 
 - (void)logCurrentValue:(id)sender {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
     NSLog(@"Switch1: %@",[[userDefaults objectForKey:@"Switch1"] boolValue]?@"Enabled":@"Disabled");
+    
     NSLog(@"Field1: %@",[userDefaults objectForKey:@"Field1"]);
+    
     NSLog(@"SliderKey2: %f",[[userDefaults objectForKey:@"SliderKey2"] floatValue]);
-    NSLog(@"List Cell Value: %@",[userDefaults objectForKey:@"ListKey"]);
+    
+    NSLog(@"List Cell Value: %@",[userDefaults objectForKey:@"ListCellKey"]);
 }
 
 - (void)shareTapped:(id)sender {
@@ -211,11 +215,3 @@
 }
 
 @end
-
-
-
-
-
-
-
-

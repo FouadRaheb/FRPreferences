@@ -8,9 +8,11 @@
 
 #import "FRPCell.h"
 
+typedef void (^FRPLinkCellSelected)(UITableViewCell *sender);
+
 @interface FRPLinkCell : FRPCell
 
-+ (instancetype)cellWithTitle:(NSString *)title selectedBlock:(FRPValueChanged)block;
++ (instancetype)cellWithTitle:(NSString *)title selectedBlock:(FRPLinkCellSelected)block;
 
 @end
 

@@ -13,16 +13,13 @@
 
 @implementation FRPLinkCell
 
-+ (instancetype)cellWithTitle:(NSString *)title selectedBlock:(FRPValueChanged)block {
++ (instancetype)cellWithTitle:(NSString *)title selectedBlock:(FRPLinkCellSelected)block {
     return [[self alloc] cellWithTitle:title selectedBlock:block];
 }
 
-
-- (instancetype)cellWithTitle:(NSString *)title selectedBlock:(FRPValueChanged)block {
+- (instancetype)cellWithTitle:(NSString *)title selectedBlock:(FRPLinkCellSelected)block {
     FRPLinkCell *cell = [super initWithTitle:title setting:nil];
-    cell.valueChanged = ^(id sender) {
-        if (block) block(sender);
-    };
+    cell.valueChanged = block;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
@@ -30,7 +27,9 @@
 - (void)didSelectFromTable:(FRPreferences *)viewController {
     NSIndexPath *indexPath = [viewController.tableView indexPathForCell:self];
     [viewController.tableView deselectRowAtIndexPath:indexPath animated:YES];
-    self.valueChanged(self);
+    if (self.valueChanged) {
+        self.valueChanged(self);
+    }
 }
 
 - (void)layoutSubviews {

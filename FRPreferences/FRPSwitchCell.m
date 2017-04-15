@@ -10,17 +10,14 @@
 
 @implementation FRPSwitchCell
 
-+ (instancetype)cellWithTitle:(NSString *)title setting:(FRPSettings *)setting postNotification:(NSString *)notification changeBlock:(FRPValueChanged)block {
++ (instancetype)cellWithTitle:(NSString *)title setting:(FRPSettings *)setting postNotification:(NSString *)notification changeBlock:(FRPSwitchCellChanged)block {
     return [[self alloc] cellWithTitle:title setting:setting postNotification:notification changeBlock:block];
 }
 
-
-- (instancetype)cellWithTitle:(NSString *)title setting:(FRPSettings *)setting postNotification:(NSString *)notification changeBlock:(FRPValueChanged)block {
+- (instancetype)cellWithTitle:(NSString *)title setting:(FRPSettings *)setting postNotification:(NSString *)notification changeBlock:(FRPSwitchCellChanged)block {
     FRPSwitchCell *cell = [super initWithTitle:title setting:setting];
     cell.postNotification = notification;
-    cell.valueChanged = ^(id sender) {
-        if (block) block(sender);
-    };
+    cell.valueChanged = block;
     self.switchView = [[UISwitch alloc] initWithFrame:CGRectZero];
     [self.switchView setOn:[self.setting.value boolValue] animated:NO];
     [self.switchView addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
@@ -31,7 +28,9 @@
 
 - (void)switchChanged:(UISwitch *)switchItem {
     self.setting.value = [NSNumber numberWithBool:[switchItem isOn]];
-    self.valueChanged(switchItem);
+    if (self.valueChanged) {
+        self.valueChanged(switchItem);
+    }
     [[NSNotificationCenter defaultCenter] postNotificationName:self.postNotification object:switchItem];
 }
 

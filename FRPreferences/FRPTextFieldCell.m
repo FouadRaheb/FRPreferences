@@ -16,17 +16,15 @@
 
 @implementation FRPTextFieldCell
 
-+ (instancetype)cellWithTitle:(NSString *)title setting:(FRPSettings *)setting placeholder:(NSString *)placeholder postNotification:(NSString *)notification changeBlock:(FRPValueChanged)block {
++ (instancetype)cellWithTitle:(NSString *)title setting:(FRPSettings *)setting placeholder:(NSString *)placeholder postNotification:(NSString *)notification changeBlock:(FRPTextFieldCellChanged)block {
     return [[self alloc] cellWithTitle:title setting:setting placeholder:placeholder postNotification:notification changeBlock:block];
 }
 
-- (instancetype)cellWithTitle:(NSString *)title setting:(FRPSettings *)setting placeholder:(NSString *)placeholder postNotification:(NSString *)notification changeBlock:(FRPValueChanged)block {
+- (instancetype)cellWithTitle:(NSString *)title setting:(FRPSettings *)setting placeholder:(NSString *)placeholder postNotification:(NSString *)notification changeBlock:(FRPTextFieldCellChanged)block {
     FRPTextFieldCell *cell = [super initWithTitle:title setting:setting];
     cell.setting = setting;
     cell.postNotification = notification;
-    cell.valueChanged = ^(id sender) {
-        if (block) block(sender);
-    };
+    cell.valueChanged = block;
     self.textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 190, 30)];
     [self.textField setDelegate:self];
     [self.textField setTextAlignment:NSTextAlignmentRight];
@@ -43,7 +41,9 @@
 
 - (void)textFieldChanged:(UITextField *)textField {
     self.setting.value = [textField text];
-    self.valueChanged(textField);
+    if (self.valueChanged) {
+        self.valueChanged(textField);
+    }
     [[NSNotificationCenter defaultCenter] postNotificationName:self.postNotification object:textField];
 }
 

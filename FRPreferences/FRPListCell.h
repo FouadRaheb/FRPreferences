@@ -8,10 +8,10 @@
 
 #import "FRPCell.h"
 
-typedef void (^FRPListItemChange)(NSString *item);
+typedef void (^FRPListItemChange)(NSString *value);
 
 @interface FRPListCell : FRPCell
-+ (instancetype)cellWithTitle:(NSString *)title setting:(FRPSettings *)setting items:(NSArray *)items value:(NSArray *)values popViewOnSelect:(BOOL)pop postNotification:(NSString *)notification changedBlock:(FRPValueChanged)block;
++ (instancetype)cellWithTitle:(NSString *)title setting:(FRPSettings *)setting items:(NSArray *)items value:(NSArray *)values popViewOnSelect:(BOOL)pop postNotification:(NSString *)notification changedBlock:(FRPListItemChange)block;
 @property (nonatomic, strong) NSArray *items;
 @property (nonatomic, strong) NSArray *values;
 @property (nonatomic, assign) BOOL popView;

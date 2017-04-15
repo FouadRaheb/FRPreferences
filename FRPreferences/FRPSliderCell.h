@@ -8,6 +8,8 @@
 
 #import "FRPCell.h"
 
+typedef void (^FRPSliderCellChanged)(UISlider *sender);
+
 @interface FRPSliderCell : FRPCell
 
 @property (nonatomic, strong) UISlider *sliderCell;
@@ -19,6 +21,6 @@
 @property (nonatomic) float min;
 @property (nonatomic) float max;
 
-+ (instancetype)cellWithTitle:(NSString *)title setting:(FRPSettings *)setting min:(float)min max:(float)max postNotification:(NSString *)notification changeBlock:(FRPValueChanged)block;
++ (instancetype)cellWithTitle:(NSString *)title setting:(FRPSettings *)setting min:(float)min max:(float)max postNotification:(NSString *)notification changeBlock:(FRPSliderCellChanged)block;
 
 @end

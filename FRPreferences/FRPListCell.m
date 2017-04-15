@@ -14,16 +14,14 @@
 
 @implementation FRPListCell
 
-+ (instancetype)cellWithTitle:(NSString *)title setting:(FRPSettings *)setting items:(NSArray *)items value:(NSArray *)values popViewOnSelect:(BOOL)pop postNotification:(NSString *)notification changedBlock:(FRPValueChanged)block {
++ (instancetype)cellWithTitle:(NSString *)title setting:(FRPSettings *)setting items:(NSArray *)items value:(NSArray *)values popViewOnSelect:(BOOL)pop postNotification:(NSString *)notification changedBlock:(FRPListItemChange)block {
     return [[self alloc] cellWithTitle:title setting:setting items:items value:values popViewOnSelect:pop postNotification:(NSString *)notification changedBlock:block];
 }
 
 
-- (instancetype)cellWithTitle:(NSString *)title setting:(FRPSettings *)setting items:(NSArray *)items value:(NSArray *)values popViewOnSelect:(BOOL)pop postNotification:(NSString *)notification changedBlock:(FRPValueChanged)block {
+- (instancetype)cellWithTitle:(NSString *)title setting:(FRPSettings *)setting items:(NSArray *)items value:(NSArray *)values popViewOnSelect:(BOOL)pop postNotification:(NSString *)notification changedBlock:(FRPListItemChange)block {
     FRPListCell *cell = [super initWithTitle:title setting:setting];
-    cell.valueChanged = ^(id sender) {
-        if (block) block(sender);
-    };
+    [cell setValueChanged:block];
     cell.items = items;
     cell.values = values;
     self.popView = pop;
@@ -40,10 +38,12 @@
     UITableViewCell *cell = [viewController.tableView cellForRowAtIndexPath:indexPath];
     
     FRPSelectListTable *selectionList = [[FRPSelectListTable alloc] initWithStyle:UITableViewStyleGrouped title:cell.textLabel.text items:self.items values:self.values currentValue:self.setting.value popViewOnSelect:self.popView changeBlock:^(NSString *item) {
+        cell.detailTextLabel.text = item;
         NSString *valueOfItem = [self.values objectAtIndex:[self.items indexOfObject:item]];
         self.setting.value = valueOfItem;
-        self.valueChanged(valueOfItem);
-        cell.detailTextLabel.text = item;
+        if (self.valueChanged) {
+            self.valueChanged(valueOfItem);
+        }
         [[NSNotificationCenter defaultCenter] postNotificationName:self.postNotification object:valueOfItem];
     }];
     selectionList.tintUIColor = self.tintUIColor;
