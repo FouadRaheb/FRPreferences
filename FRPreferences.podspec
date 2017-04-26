@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'FRPreferences'
-  s.version      = '1.0.9'
+  s.version      = '1.0.10'
   s.summary      = "In-App Preferences controls built easily"
   s.homepage         = "https://github.com/FouadRaheb/FRPreferences"
   s.license          = 'GPL'
